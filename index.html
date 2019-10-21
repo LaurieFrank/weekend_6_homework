@@ -25,12 +25,25 @@
       </div>
 
       <div class="form-item">
-        <label for="best-album" class="primary">Artist's Best Albums</label>
-        <input type="text" id="best_album" required/>
+        <label for="album" class="primary">Album</label>
+        <input type="text" id="album" required/>
       </div>
-      <input type="submit" value="save"/>
-    </form>
 
+      <div class="form-item">
+        <input type="radio" id="radio1" name="drone" value="best">
+        <label for="radio1">Best Album Ever</label>
+
+        <input type="radio" id="radio2" name="drone" value="good">
+        <label for="radio2">Pretty Good Album</label>
+
+        <input type="radio" id="radio3" name="drone" value="worst">
+        <label for="radio3">Worst Album</label>
+      </div>
+      <br>
+      <input type="submit" value="Add to artist list here"/>
+
+    </form>
+    <br>
     <h1>Artist List</h1>
     <div id="artist-list"></div>
     <button id="delete-all">Delete All Artists</button>

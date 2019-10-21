@@ -19,14 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
     newArtist.textContent = event.target.artist.value;
     newSubmission.appendChild(newArtist);
 
-    const newGenre = document.createElement("p");
+    const newGenre = document.createElement("h3");
     newGenre.textContent = event.target.genre.value;
     newSubmission.appendChild(newGenre);
 
-    const newBestAlbum = document.createElement("h2");
-    newBestAlbum.textContent = event.target.best_album.value;
-    newSubmission.appendChild(newBestAlbum);
+    const newAlbum = document.createElement("h3");
+    newAlbum.textContent = event.target.album.value;
+    newSubmission.appendChild(newAlbum);
 
+    if (radio1 === true) {
+      const newRating = document.createElement("h3");
+      newRating.textContent = event.target.radio1.value;
+      newSubmission.appendChild(newRating);
+    } else if (radio2 === true) {
+      const newRating = document.createElement("h3");
+      newRating.textContent = event.target.radio2.value;
+      newSubmission.appendChild(newRating);
+    } else {
+      const newRating = document.createElement("h3");
+      newRating.textContent = event.target.radio3.value;
+      newSubmission.appendChild(newRating);
+}
     event.target.reset()
 
     return resultFormSubmit;
